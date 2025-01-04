@@ -11,7 +11,7 @@ import (
 	"github.com/MunifTanjim/stremthru/store"
 )
 
-func getEnv(key string, defaultValue string) string {
+func getEnv(key, defaultValue string) string {
 	if value, exists := os.LookupEnv(key); exists && len(value) > 0 {
 		return value
 	}
@@ -222,7 +222,7 @@ var config = func() Config {
 	}
 
 	return Config{
-		Port:               getEnv("STREMTHRU_PORT", "8080"),
+		Port:               getEnv("PORT", getEnv("STREMTHRU_PORT", "8080")), // Prioritize "PORT" for platforms like Vercel
 		ProxyAuthPassword:  proxyAuthPasswordMap,
 		ProxyStreamEnabled: len(proxyAuthPasswordMap) > 0,
 		StoreAuthToken:     storeAuthTokenMap,
@@ -241,22 +241,24 @@ var config = func() Config {
 	}
 }()
 
-var Port = config.Port
-var ProxyAuthPassword = config.ProxyAuthPassword
-var ProxyStreamEnabled = config.ProxyStreamEnabled
-var StoreAuthToken = config.StoreAuthToken
-var BuddyURL = config.BuddyURL
-var HasBuddy = config.HasBuddy
-var PeerURL = config.PeerURL
-var PeerAuthToken = config.PeerAuthToken
-var HasPeer = config.HasPeer
-var RedisURI = config.RedisURI
-var DatabaseURI = config.DatabaseURI
-var StremioAddon = config.StremioAddon
-var Version = config.Version
-var LandingPage = config.LandingPage
-var ServerStartTime = config.ServerStartTime
-var StoreTunnel = config.StoreTunnel
+var (
+	Port               = config.Port
+	ProxyAuthPassword  = config.ProxyAuthPassword
+	ProxyStreamEnabled = config.ProxyStreamEnabled
+	StoreAuthToken     = config.StoreAuthToken
+	BuddyURL           = config.BuddyURL
+	HasBuddy           = config.HasBuddy
+	PeerURL            = config.PeerURL
+	PeerAuthToken      = config.PeerAuthToken
+	HasPeer            = config.HasPeer
+	RedisURI           = config.RedisURI
+	DatabaseURI        = config.DatabaseURI
+	StremioAddon       = config.StremioAddon
+	Version            = config.Version
+	LandingPage        = config.LandingPage
+	ServerStartTime    = config.ServerStartTime
+	StoreTunnel        = config.StoreTunnel
+)
 
 func getRedactedURI(uri string) (string, error) {
 	u, err := url.Parse(uri)
@@ -273,108 +275,4 @@ func PrintConfig() {
 	l.Printf(" Version: %v\n", Version)
 	l.Printf(" Port: %v\n", Port)
 	l.Println("========================")
-	l.Println()
-
-	httpProxy, httpsProxy := getEnv("HTTP_PROXY", ""), getEnv("HTTPS_PROXY", "")
-	hasTunnel := httpProxy != "" || httpsProxy != ""
-	if hasTunnel {
-		l.Println(" Tunnel:")
-		if httpProxy != "" {
-			l.Println("    HTTP: " + httpProxy)
-		}
-		if httpsProxy != "" {
-			l.Println("   HTTPS: " + httpsProxy)
-		}
-		l.Println()
-	}
-
-	usersCount := len(ProxyAuthPassword)
-	if usersCount > 0 {
-		l.Println(" Users:")
-		for user := range ProxyAuthPassword {
-			stores := StoreAuthToken.ListStores(user)
-			preferredStore := StoreAuthToken.GetPreferredStore(user)
-			if len(stores) == 0 {
-				stores = append(stores, preferredStore)
-			} else if len(stores) > 1 {
-				for i := range stores {
-					if stores[i] == preferredStore {
-						stores[i] = "*" + stores[i]
-					}
-				}
-			}
-			storeConfig := " (store:" + strings.Join(stores, ",") + ")"
-			l.Println("   - " + user + storeConfig)
-		}
-		l.Println()
-	}
-
-	l.Println(" Stores:")
-	for _, store := range []store.StoreName{
-		store.StoreNameAlldebrid,
-		store.StoreNameDebridLink,
-		store.StoreNameEasyDebrid,
-		store.StoreNameOffcloud,
-		store.StoreNamePremiumize,
-		store.StoreNameRealDebrid,
-		store.StoreNameTorBox,
-	} {
-		tunnelConfig := ""
-		if hasTunnel {
-			if StoreTunnel.IsEnabledForAPI(string(store)) {
-				tunnelConfig += "api"
-				if usersCount > 0 && StoreTunnel.IsEnabledForStream(string(store)) {
-					tunnelConfig += "+stream"
-				}
-				tunnelConfig = " (tunnel:" + tunnelConfig + ")"
-			}
-		}
-		l.Println("   - " + string(store) + tunnelConfig)
-	}
-	l.Println()
-
-	if HasBuddy {
-		l.Println(" Buddy URI:")
-		l.Println("   " + BuddyURL)
-		l.Println()
-	}
-
-	if HasPeer {
-		u, err := url.Parse(PeerURL)
-		if err != nil {
-			l.Panicf(" Invalid Peer URI: %v\n", err)
-		}
-		u.User = url.UserPassword("", PeerAuthToken)
-		l.Println(" Peer URI:")
-		l.Println("   " + u.Redacted())
-		l.Println()
-	}
-
-	if RedisURI != "" {
-		uri, err := getRedactedURI(RedisURI)
-		if err != nil {
-			l.Panicf(" Invalid Redis URI: %v\n", err)
-		}
-		l.Println(" Redis URI:")
-		l.Println("  " + uri)
-		l.Println()
-	}
-
-	uri, err := getRedactedURI(DatabaseURI)
-	if err != nil {
-		l.Panicf(" Invalid Database URI: %v\n", err)
-	}
-	l.Println(" Database URI:")
-	l.Println("   " + uri)
-	l.Println()
-
-	if len(StremioAddon.enabled) > 0 {
-		l.Println(" Stremio Addons:")
-		for _, addon := range StremioAddon.enabled {
-			l.Println("   - " + addon)
-		}
-		l.Println()
-	}
-
-	l.Println("========================\n")
 }
