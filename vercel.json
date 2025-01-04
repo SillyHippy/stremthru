@@ -1,17 +1,15 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "stremthru",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "."
-      }
+      "src": "main.go",
+      "use": "@vercel/go"
     }
   ],
   "routes": [
     {
-      "src": "/.*",
-      "dest": "stremthru"
+      "src": "/(.*)",
+      "dest": "main.go"
     }
   ]
 }
