@@ -17,5 +17,5 @@
     "STREMTHRU_DATABASE_URI": "sqlite://./data/stremthru.db",
     "STREMTHRU_REDIS_URI": "your_redis_uri"
   },
-  "ignore": ["test/*", "docs/*"]
+
 }
