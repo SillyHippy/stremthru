@@ -1,41 +1,42 @@
 package main
 
 import (
-	"log"
+	"context"
 	"net/http"
 	"github.com/MunifTanjim/stremthru/internal/config"
 	"github.com/MunifTanjim/stremthru/internal/db"
 	"github.com/MunifTanjim/stremthru/internal/endpoint"
 )
 
-var (
-	mux      *http.ServeMux
-	database *db.Database
-)
+var mux *http.ServeMux
 
-func init() {
-	// Initialize configuration
-	config.PrintConfig()
-
-	// Create ServeMux and add endpoints
-	mux = http.NewServeMux()
+func setupMux() *http.ServeMux {
+	mux := http.NewServeMux()
 	endpoint.AddRootEndpoint(mux)
 	endpoint.AddHealthEndpoints(mux)
 	endpoint.AddProxyEndpoints(mux)
 	endpoint.AddStoreEndpoints(mux)
 	endpoint.AddStremioEndpoints(mux)
+	return mux
+}
 
-	// Connect to the database
-	var err error
-	database, err = db.Open()
-	if err != nil {
-		log.Fatalf("Failed to connect to the database: %v", err)
-	}
+func setupDatabase() {
+	database := db.Open()
+	defer db.Close() // Ensure proper cleanup when the application terminates
+	db.Ping()
+	RunSchemaMigration(database.URI)
+}
 
-	// Test database connection
-	if err := db.Ping(); err != nil {
-		log.Fatalf("Database connection failed: %v", err)
-	}
+func init() {
+	// Initialize configuration
+	config.PrintConfig()
 
-	// Run schema migrations
-	if err := Run
+	// Setup database and routes
+	setupDatabase()
+	mux = setupMux()
+}
+
+// Handler is the exported function required by Vercel
+func Handler(ctx context.Context, w http.ResponseWriter, r *http.Request) {
+	mux.ServeHTTP(w, r)
+}
