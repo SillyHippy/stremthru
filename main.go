@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"net/http"
 	"github.com/MunifTanjim/stremthru/internal/config"
 	"github.com/MunifTanjim/stremthru/internal/db"
@@ -10,33 +9,28 @@ import (
 
 var mux *http.ServeMux
 
-func setupMux() *http.ServeMux {
-	mux := http.NewServeMux()
+func init() {
+	// Initialize your app's configuration
+	config.PrintConfig()
+
+	// Create a new ServeMux and add endpoints
+	mux = http.NewServeMux()
 	endpoint.AddRootEndpoint(mux)
 	endpoint.AddHealthEndpoints(mux)
 	endpoint.AddProxyEndpoints(mux)
 	endpoint.AddStoreEndpoints(mux)
 	endpoint.AddStremioEndpoints(mux)
-	return mux
-}
 
-func setupDatabase() {
+	// Connect to the database
 	database := db.Open()
-	defer db.Close() // Ensure proper cleanup when the application terminates
+	defer db.Close()
 	db.Ping()
+
+	// Run any necessary schema migrations
 	RunSchemaMigration(database.URI)
 }
 
-func init() {
-	// Initialize configuration
-	config.PrintConfig()
-
-	// Setup database and routes
-	setupDatabase()
-	mux = setupMux()
-}
-
 // Handler is the exported function required by Vercel
-func Handler(ctx context.Context, w http.ResponseWriter, r *http.Request) {
-	mux.ServeHTTP(w, r)
+func Handler(w http.ResponseWriter, r *http.Request) {
+	mux.ServeHTTP(w, r) // Pass requests to your ServeMux
 }
