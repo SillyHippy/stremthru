@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/store"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/store"
 )
 
 func getEnv(key, defaultValue string) string {
