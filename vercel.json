@@ -3,8 +3,5 @@
     "api/*": {
       "runtime": "vercel-go@0.5.0"
     }
-  },
-  "build": {
-    "command": "go build -o stremthru main.go"
   }
 }
