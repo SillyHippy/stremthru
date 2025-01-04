@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "builds": [
     {
       "src": "main.go",
@@ -9,13 +8,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "main.go"
+      "dest": "stremthru"
     }
-  ],
-  "env": {
-    "PORT": "8080",
-    "STREMTHRU_DATABASE_URI": "sqlite://./data/stremthru.db",
-    "STREMTHRU_REDIS_URI": "your_redis_uri"
-  },
-
+  ]
 }
