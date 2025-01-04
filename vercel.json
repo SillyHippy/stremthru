@@ -10,13 +10,5 @@
       "src": "/(.*)",
       "dest": "main.go"
     }
-  ],
-  "env": {
-    "STREMTHRU_HTTP_PROXY": "http://warp:1080",
-    "STREMTHRU_HTTPS_PROXY": "http://warp:1080",
-    "STREMTHRU_PROXY_AUTH": "YOUR_USERNAME:YOUR_PASSWORD",
-    "STREMTHRU_STORE_AUTH": "YOUR_USERNAME:STORE_NAME:STORE_PASSWORD",
-    "STREMTHRU_PEER_URI": "https://stremthru.mooo.com",
-    "STREMTHRU_DATABASE_URI": "sqlite://./data/stremthru.db"
-  }
+  ]
 }
