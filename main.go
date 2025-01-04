@@ -1,7 +1,8 @@
 package main
 
 import (
-	"log"
+	"context"
+	"fmt"
 	"net/http"
 
 	"github.com/MunifTanjim/stremthru/internal/config"
@@ -9,10 +10,12 @@ import (
 	"github.com/MunifTanjim/stremthru/internal/endpoint"
 )
 
-func main() {
+var mux *http.ServeMux
+
+func init() {
 	config.PrintConfig()
 
-	mux := http.NewServeMux()
+	mux = http.NewServeMux()
 
 	endpoint.AddRootEndpoint(mux)
 	endpoint.AddHealthEndpoints(mux)
@@ -24,12 +27,9 @@ func main() {
 	defer db.Close()
 	db.Ping()
 	RunSchemaMigration(database.URI)
+}
 
-	addr := ":" + config.Port
-	server := &http.Server{Addr: addr, Handler: mux}
-
-	log.Println("stremthru listening on " + addr)
-	if err := server.ListenAndServe(); err != nil {
-		log.Fatalf("failed to start stremthru: %v", err)
-	}
+// Handler is the exported serverless function entry point
+func Handler(ctx context.Context, w http.ResponseWriter, r *http.Request) {
+	mux.ServeHTTP(w, r)
 }
