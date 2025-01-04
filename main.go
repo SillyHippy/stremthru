@@ -2,9 +2,9 @@ package handler
 
 import (
 	"net/http"
-	"github.com/MunifTanjim/stremthru/internal/config"
-	"github.com/MunifTanjim/stremthru/internal/db"
-	"github.com/MunifTanjim/stremthru/internal/endpoint"
+    "github.com/SillyHippy/stremthru/internal/config"
+    "github.com/SillyHippy/stremthru/internal/db"
+    "github.com/SillyHippy/stremthru/internal/endpoint"
 )
 
 var mux *http.ServeMux
