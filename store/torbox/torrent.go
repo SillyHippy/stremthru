@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/MunifTanjim/stremthru/core"
+	"github.com/SillyHippy/stremthru/core"
 )
 
 type CheckTorrentsCachedDataItemFile struct {

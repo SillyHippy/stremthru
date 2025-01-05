@@ -4,7 +4,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/MunifTanjim/stremthru/internal/db"
+	"github.com/SillyHippy/stremthru/internal/db"
 )
 
 const FileTableName = "magnet_cache_file"

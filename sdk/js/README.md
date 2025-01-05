@@ -1,6 +1,6 @@
-[![GitHub Workflow Status: CI [SDK/JS]](https://img.shields.io/github/actions/workflow/status/MunifTanjim/stremthru/ci-sdk-js.yml?branch=main&label=CI%20%5BSDK%2FJS%5D&style=for-the-badge)](https://github.com/MunifTanjim/stremthru/actions/workflows/ci-sdk-js.yml)
+[![GitHub Workflow Status: CI [SDK/JS]](https://img.shields.io/github/actions/workflow/status/SillyHippy/stremthru/ci-sdk-js.yml?branch=main&label=CI%20%5BSDK%2FJS%5D&style=for-the-badge)](https://github.com/SillyHippy/stremthru/actions/workflows/ci-sdk-js.yml)
 [![NPM Version](https://img.shields.io/npm/v/stremthru?style=for-the-badge)](https://npmjs.com/package/stremthru)
-[![License](https://img.shields.io/github/license/MunifTanjim/stremthru?style=for-the-badge)](https://github.com/MunifTanjim/stremthru/blob/main/sdk/js/LICENSE)
+[![License](https://img.shields.io/github/license/SillyHippy/stremthru?style=for-the-badge)](https://github.com/SillyHippy/stremthru/blob/main/sdk/js/LICENSE)
 
 # StremThru - JavaScript SDK
 

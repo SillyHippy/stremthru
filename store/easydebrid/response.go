@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/MunifTanjim/stremthru/core"
+	"github.com/SillyHippy/stremthru/core"
 )
 
 type ResponseContainer struct {

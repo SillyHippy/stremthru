@@ -3,10 +3,10 @@ package stremio_store
 import (
 	"strings"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/internal/config"
-	"github.com/MunifTanjim/stremthru/store"
-	"github.com/MunifTanjim/stremthru/stremio"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/store"
+	"github.com/SillyHippy/stremthru/stremio"
 )
 
 const CATALOG_ID = "st:store"

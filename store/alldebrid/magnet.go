@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/MunifTanjim/stremthru/store"
+	"github.com/SillyHippy/stremthru/store"
 )
 
 type MagnetError struct {

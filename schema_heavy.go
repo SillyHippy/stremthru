@@ -13,7 +13,7 @@ import (
 	"strings"
 
 	"ariga.io/atlas-go-sdk/atlasexec"
-	"github.com/MunifTanjim/stremthru/internal/db"
+	"github.com/SillyHippy/stremthru/internal/db"
 )
 
 //go:embed schema.hcl schema.postgres.hcl

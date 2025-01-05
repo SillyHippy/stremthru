@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/MunifTanjim/stremthru/internal/request"
+	"github.com/SillyHippy/stremthru/internal/request"
 )
 
 type cachedAuth struct {

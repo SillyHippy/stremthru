@@ -4,12 +4,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/MunifTanjim/stremthru/internal/buddy"
-	"github.com/MunifTanjim/stremthru/internal/context"
-	"github.com/MunifTanjim/stremthru/internal/peer_token"
-	"github.com/MunifTanjim/stremthru/internal/shared"
-	"github.com/MunifTanjim/stremthru/internal/store/video"
-	"github.com/MunifTanjim/stremthru/store"
+	"github.com/SillyHippy/stremthru/internal/buddy"
+	"github.com/SillyHippy/stremthru/internal/context"
+	"github.com/SillyHippy/stremthru/internal/peer_token"
+	"github.com/SillyHippy/stremthru/internal/shared"
+	"github.com/SillyHippy/stremthru/internal/store/video"
+	"github.com/SillyHippy/stremthru/store"
 )
 
 func getUser(ctx *context.RequestContext) (*store.User, error) {

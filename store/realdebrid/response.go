@@ -6,7 +6,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/MunifTanjim/stremthru/core"
+	"github.com/SillyHippy/stremthru/core"
 )
 
 type ResponseError struct {

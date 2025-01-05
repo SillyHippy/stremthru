@@ -5,8 +5,8 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/internal/request"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/internal/request"
 )
 
 var DefaultHTTPTransport = func() *http.Transport {

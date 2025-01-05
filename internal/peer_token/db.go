@@ -1,7 +1,7 @@
 package peer_token
 
 import (
-	"github.com/MunifTanjim/stremthru/internal/db"
+	"github.com/SillyHippy/stremthru/internal/db"
 )
 
 const TableName = "peer_token"

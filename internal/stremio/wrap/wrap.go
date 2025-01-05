@@ -9,16 +9,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/internal/buddy"
-	"github.com/MunifTanjim/stremthru/internal/cache"
-	"github.com/MunifTanjim/stremthru/internal/config"
-	"github.com/MunifTanjim/stremthru/internal/context"
-	"github.com/MunifTanjim/stremthru/internal/shared"
-	"github.com/MunifTanjim/stremthru/internal/stremio/addon"
-	"github.com/MunifTanjim/stremthru/internal/stremio/configure"
-	"github.com/MunifTanjim/stremthru/store"
-	"github.com/MunifTanjim/stremthru/stremio"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/internal/buddy"
+	"github.com/SillyHippy/stremthru/internal/cache"
+	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/internal/context"
+	"github.com/SillyHippy/stremthru/internal/shared"
+	"github.com/SillyHippy/stremthru/internal/stremio/addon"
+	"github.com/SillyHippy/stremthru/internal/stremio/configure"
+	"github.com/SillyHippy/stremthru/store"
+	"github.com/SillyHippy/stremthru/stremio"
 )
 
 var addon = func() *stremio_addon.Client {

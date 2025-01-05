@@ -1,5 +1,5 @@
-[![GitHub Workflow Status: CI](https://img.shields.io/github/actions/workflow/status/MunifTanjim/stremthru/ci.yml?branch=main&label=CI&style=for-the-badge)](https://github.com/MunifTanjim/stremthru/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/MunifTanjim/stremthru?style=for-the-badge)](https://github.com/MunifTanjim/stremthru/blob/master/LICENSE)
+[![GitHub Workflow Status: CI](https://img.shields.io/github/actions/workflow/status/SillyHippy/stremthru/ci.yml?branch=main&label=CI&style=for-the-badge)](https://github.com/SillyHippy/stremthru/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/SillyHippy/stremthru?style=for-the-badge)](https://github.com/SillyHippy/stremthru/blob/master/LICENSE)
 
 # StremThru
 
@@ -371,7 +371,7 @@ Extra Features for Stremio.
 **Source**
 
 ```sh
-git clone https://github.com/MunifTanjim/stremthru
+git clone https://github.com/SillyHippy/stremthru
 cd stremthru
 
 # configure

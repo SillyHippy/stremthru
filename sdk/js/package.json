@@ -4,9 +4,9 @@
   "version": "0.7.0",
   "description": "SDK for StremThru",
   "keywords": [],
-  "homepage": "https://github.com/MunifTanjim/stremthru/tree/main/sdk/js#readme",
+  "homepage": "https://github.com/SillyHippy/stremthru/tree/main/sdk/js#readme",
   "bugs": {
-    "url": "https://github.com/MunifTanjim/stremthru/issues"
+    "url": "https://github.com/SillyHippy/stremthru/issues"
   },
   "license": "MIT",
   "author": {
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MunifTanjim/stremthru",
+    "url": "https://github.com/SillyHippy/stremthru",
     "directory": "sdk/js"
   },
   "scripts": {

@@ -6,7 +6,7 @@ func GetScriptStoreTokenDescription(storeNameId, storeTokenId string) template.J
 	return template.JS(`function onStoreNameChangeUpdateStoreTokenDescription() {
   const descByName = {
     "*": "API Key",
-    "": "StremThru Basic Auth Token (base64 encoded) from <a href='https://github.com/MunifTanjim/stremthru?tab=readme-ov-file#configuration' target='_blank'><code>STREMTHRU_PROXY_AUTH</code></a>",
+    "": "StremThru Basic Auth Token (base64 encoded) from <a href='https://github.com/SillyHippy/stremthru?tab=readme-ov-file#configuration' target='_blank'><code>STREMTHRU_PROXY_AUTH</code></a>",
 		alldebrid: "AllDebrid <a href='https://alldebrid.com/apikeys' target='_blank'>API Key</a>",
 		debridlink: "DebridLink <a href='https://debrid-link.com/webapp/apikey' target='_blank'>API Key</a>",
 		easydebrid: "EasyDebrid API Key",

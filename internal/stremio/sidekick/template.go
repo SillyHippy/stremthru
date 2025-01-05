@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/MunifTanjim/stremthru/internal/config"
-	"github.com/MunifTanjim/stremthru/internal/stremio/api"
+	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/internal/stremio/api"
 )
 
 //go:embed *.html

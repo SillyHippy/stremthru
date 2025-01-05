@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/internal/request"
-	"github.com/MunifTanjim/stremthru/store"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/internal/request"
+	"github.com/SillyHippy/stremthru/store"
 )
 
 var DefaultHTTPTransport = request.DefaultHTTPTransport

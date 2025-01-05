@@ -5,9 +5,9 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/internal/buddy"
-	"github.com/MunifTanjim/stremthru/store"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/internal/buddy"
+	"github.com/SillyHippy/stremthru/store"
 )
 
 type StoreClientConfig struct {

@@ -7,7 +7,7 @@ import (
 	"html/template"
 	"net/http"
 
-	"github.com/MunifTanjim/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/internal/config"
 )
 
 //go:embed root.html

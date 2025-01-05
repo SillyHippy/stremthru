@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/MunifTanjim/stremthru/internal/config"
-	"github.com/MunifTanjim/stremthru/internal/db"
-	"github.com/MunifTanjim/stremthru/store"
+	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/internal/db"
+	"github.com/SillyHippy/stremthru/store"
 )
 
 const TableName = "magnet_cache"

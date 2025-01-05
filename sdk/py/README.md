@@ -1,6 +1,6 @@
-[![GitHub Workflow Status: CI [SDK/PY]](https://img.shields.io/github/actions/workflow/status/MunifTanjim/stremthru/ci-sdk-py.yml?branch=main&label=CI%20%5BSDK%2FPY%5D&style=for-the-badge)](https://github.com/MunifTanjim/stremthru/actions/workflows/ci-sdk-py.yml)
+[![GitHub Workflow Status: CI [SDK/PY]](https://img.shields.io/github/actions/workflow/status/SillyHippy/stremthru/ci-sdk-py.yml?branch=main&label=CI%20%5BSDK%2FPY%5D&style=for-the-badge)](https://github.com/SillyHippy/stremthru/actions/workflows/ci-sdk-py.yml)
 [![PyPI - Version](https://img.shields.io/pypi/v/stremthru?style=for-the-badge)](https://pypi.org/project/stremthru/)
-[![License](https://img.shields.io/github/license/MunifTanjim/stremthru?style=for-the-badge)](https://github.com/MunifTanjim/stremthru/blob/main/sdk/py/LICENSE)
+[![License](https://img.shields.io/github/license/SillyHippy/stremthru?style=for-the-badge)](https://github.com/SillyHippy/stremthru/blob/main/sdk/py/LICENSE)
 
 # StremThru - Python SDK
 

@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/internal/request"
-	"github.com/MunifTanjim/stremthru/internal/shared"
-	"github.com/MunifTanjim/stremthru/stremio"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/internal/request"
+	"github.com/SillyHippy/stremthru/internal/shared"
+	"github.com/SillyHippy/stremthru/stremio"
 )
 
 var DefaultHTTPTransport = request.DefaultHTTPTransport

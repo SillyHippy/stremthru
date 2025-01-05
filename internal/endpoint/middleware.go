@@ -4,11 +4,11 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/internal/config"
-	"github.com/MunifTanjim/stremthru/internal/context"
-	"github.com/MunifTanjim/stremthru/internal/shared"
-	"github.com/MunifTanjim/stremthru/store"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/internal/context"
+	"github.com/SillyHippy/stremthru/internal/shared"
+	"github.com/SillyHippy/stremthru/store"
 )
 
 type MiddlewareFunc func(http.HandlerFunc) http.HandlerFunc

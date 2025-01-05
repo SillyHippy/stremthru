@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/url"
 
-	"github.com/MunifTanjim/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/internal/config"
 	_ "github.com/jackc/pgx/v5/stdlib"
 	_ "github.com/mattn/go-sqlite3"
 )

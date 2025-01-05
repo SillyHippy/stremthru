@@ -5,7 +5,7 @@ import (
 	"embed"
 	"html/template"
 
-	"github.com/MunifTanjim/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/internal/config"
 )
 
 type ConfigType string

@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/MunifTanjim/stremthru/internal/shared"
+	"github.com/SillyHippy/stremthru/internal/shared"
 )
 
 func handleManifest(w http.ResponseWriter, r *http.Request) {

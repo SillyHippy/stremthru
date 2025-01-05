@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/MunifTanjim/stremthru/store"
+	"github.com/SillyHippy/stremthru/store"
 )
 
 type CheckMagnetCacheParams struct {

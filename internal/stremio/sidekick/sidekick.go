@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/internal/shared"
-	"github.com/MunifTanjim/stremthru/internal/stremio/addon"
-	"github.com/MunifTanjim/stremthru/internal/stremio/api"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/internal/shared"
+	"github.com/SillyHippy/stremthru/internal/stremio/addon"
+	"github.com/SillyHippy/stremthru/internal/stremio/api"
 )
 
 var client = func() *stremio_api.Client {

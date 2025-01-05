@@ -3,11 +3,11 @@ package endpoint
 import (
 	"net/http"
 
-	"github.com/MunifTanjim/stremthru/internal/config"
-	"github.com/MunifTanjim/stremthru/internal/stremio/disabled"
-	"github.com/MunifTanjim/stremthru/internal/stremio/sidekick"
-	"github.com/MunifTanjim/stremthru/internal/stremio/store"
-	"github.com/MunifTanjim/stremthru/internal/stremio/wrap"
+	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/internal/stremio/disabled"
+	"github.com/SillyHippy/stremthru/internal/stremio/sidekick"
+	"github.com/SillyHippy/stremthru/internal/stremio/store"
+	"github.com/SillyHippy/stremthru/internal/stremio/wrap"
 )
 
 func AddStremioEndpoints(mux *http.ServeMux) {

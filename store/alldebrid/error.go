@@ -3,8 +3,8 @@ package alldebrid
 import (
 	"net/http"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/store"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/store"
 )
 
 type ErrorCode = core.ErrorCode

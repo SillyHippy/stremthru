@@ -1,6 +1,6 @@
 package store
 
-import "github.com/MunifTanjim/stremthru/core"
+import "github.com/SillyHippy/stremthru/core"
 
 var ErrorInvalidStoreName = func(name string) *core.StoreError {
 	err := core.NewStoreError("invalid store name")

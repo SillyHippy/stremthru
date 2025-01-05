@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/MunifTanjim/stremthru/internal/shared"
+	"github.com/SillyHippy/stremthru/internal/shared"
 )
 
 var IsMethod = shared.IsMethod

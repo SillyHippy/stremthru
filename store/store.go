@@ -3,8 +3,8 @@ package store
 import (
 	"time"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/internal/request"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/internal/request"
 )
 
 type Ctx = request.Ctx

@@ -1,7 +1,7 @@
 package endpoint
 
 import (
-	"github.com/MunifTanjim/stremthru/internal/shared"
+	"github.com/SillyHippy/stremthru/internal/shared"
 )
 
 var GetQueryInt = shared.GetQueryInt

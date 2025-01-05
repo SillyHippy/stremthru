@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/MunifTanjim/stremthru/internal/config"
-	"github.com/MunifTanjim/stremthru/internal/context"
-	"github.com/MunifTanjim/stremthru/internal/request"
-	"github.com/MunifTanjim/stremthru/internal/shared"
+	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/internal/context"
+	"github.com/SillyHippy/stremthru/internal/request"
+	"github.com/SillyHippy/stremthru/internal/shared"
 )
 
 type HealthData struct {

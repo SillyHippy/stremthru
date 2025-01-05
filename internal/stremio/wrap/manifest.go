@@ -3,8 +3,8 @@ package stremio_wrap
 import (
 	"strings"
 
-	"github.com/MunifTanjim/stremthru/store"
-	"github.com/MunifTanjim/stremthru/stremio"
+	"github.com/SillyHippy/stremthru/store"
+	"github.com/SillyHippy/stremthru/stremio"
 )
 
 func getManifest(upstream *stremio.Manifest, ud *UserData) *stremio.Manifest {

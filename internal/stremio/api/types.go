@@ -3,7 +3,7 @@ package stremio_api
 import (
 	"time"
 
-	"github.com/MunifTanjim/stremthru/stremio"
+	"github.com/SillyHippy/stremthru/stremio"
 )
 
 type UserGDPRConsent struct {

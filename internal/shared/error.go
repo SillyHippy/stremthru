@@ -3,7 +3,7 @@ package shared
 import (
 	"net/http"
 
-	"github.com/MunifTanjim/stremthru/core"
+	"github.com/SillyHippy/stremthru/core"
 )
 
 var ErrorUnauthorized = func(r *http.Request) *core.APIError {

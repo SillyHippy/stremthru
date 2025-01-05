@@ -5,11 +5,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/MunifTanjim/stremthru/core"
-	"github.com/MunifTanjim/stremthru/internal/buddy"
-	"github.com/MunifTanjim/stremthru/internal/cache"
-	"github.com/MunifTanjim/stremthru/internal/request"
-	"github.com/MunifTanjim/stremthru/store"
+	"github.com/SillyHippy/stremthru/core"
+	"github.com/SillyHippy/stremthru/internal/buddy"
+	"github.com/SillyHippy/stremthru/internal/cache"
+	"github.com/SillyHippy/stremthru/internal/request"
+	"github.com/SillyHippy/stremthru/store"
 )
 
 type StoreClientConfig struct {

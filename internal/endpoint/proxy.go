@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/MunifTanjim/stremthru/internal/shared"
+	"github.com/SillyHippy/stremthru/internal/shared"
 )
 
 func handleProxy(w http.ResponseWriter, r *http.Request) {
