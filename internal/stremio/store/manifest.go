@@ -4,7 +4,7 @@ import (
 	"strings"
 
 	"github.com/SillyHippy/stremthru/core"
-	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/pkg/config"
 	"github.com/SillyHippy/stremthru/store"
 	"github.com/SillyHippy/stremthru/stremio"
 )

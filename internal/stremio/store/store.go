@@ -10,7 +10,7 @@ import (
 
 	"github.com/SillyHippy/stremthru/core"
 	"github.com/SillyHippy/stremthru/internal/cache"
-	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/pkg/config"
 	"github.com/SillyHippy/stremthru/internal/context"
 	"github.com/SillyHippy/stremthru/internal/shared"
 	"github.com/SillyHippy/stremthru/internal/stremio/configure"
