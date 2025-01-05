@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/SillyHippy/stremthru/pkg/config"
+	"github.com/SillyHippy/stremthru/internal/config"
 	"github.com/SillyHippy/stremthru/internal/context"
 	"github.com/SillyHippy/stremthru/internal/request"
 	"github.com/SillyHippy/stremthru/internal/shared"

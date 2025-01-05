@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/SillyHippy/stremthru/pkg/config"
+	"github.com/SillyHippy/stremthru/internal/config"
 )
 
 //go:embed *.mp4

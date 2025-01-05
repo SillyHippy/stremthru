@@ -3,7 +3,7 @@ package endpoint
 import (
 	"net/http"
 
-	"github.com/SillyHippy/stremthru/pkg/config"
+	"github.com/SillyHippy/stremthru/internal/config"
 	"github.com/SillyHippy/stremthru/internal/stremio/disabled"
 	"github.com/SillyHippy/stremthru/internal/stremio/sidekick"
 	"github.com/SillyHippy/stremthru/internal/stremio/store"

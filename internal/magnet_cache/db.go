@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/SillyHippy/stremthru/pkg/config"
+	"github.com/SillyHippy/stremthru/internal/config"
 	"github.com/SillyHippy/stremthru/internal/db"
 	"github.com/SillyHippy/stremthru/store"
 )
