@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/SillyHippy/stremthru/core"
-	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/pkg/config"
 	"github.com/SillyHippy/stremthru/internal/magnet_cache"
 	"github.com/SillyHippy/stremthru/internal/peer"
 	"github.com/SillyHippy/stremthru/store"

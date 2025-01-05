@@ -3,7 +3,7 @@ package cache
 import (
 	"time"
 
-	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/pkg/config"
 )
 
 type Cache[V any] interface {

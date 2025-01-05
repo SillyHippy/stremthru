@@ -5,7 +5,7 @@ import (
 	"embed"
 	"html/template"
 
-	"github.com/SillyHippy/stremthru/internal/config"
+	"github.com/SillyHippy/stremthru/pkg/config"
 )
 
 type ConfigType string

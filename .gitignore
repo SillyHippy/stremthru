@@ -44,3 +44,4 @@ go.work.sum
 ## Others
 .yarn-integrity
 node_modules
+.vercel
