@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "main.go",
+      "src": "cmd/stremthru/main.go",
       "use": "@vercel/go"
     }
   ]
