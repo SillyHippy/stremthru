@@ -1,4 +1,4 @@
-module module github.com/SillyHippy/stremthru
+module github.com/SillyHippy/stremthru
 
 go 1.22.5
 
